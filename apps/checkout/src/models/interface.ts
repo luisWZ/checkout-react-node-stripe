@@ -1,6 +1,5 @@
-import { Product } from '@checkout-stripe/interface';
+import type { Product } from '@checkout-stripe/interface';
 import type { ChangeEvent, FormEvent } from 'react';
-import Stripe from 'stripe';
 
 export type OnSubmit = (evt: FormEvent<HTMLFormElement>) => void;
 

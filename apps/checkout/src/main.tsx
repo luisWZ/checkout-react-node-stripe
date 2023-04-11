@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { Elements as Stripe } from '@stripe/react-stripe-js';
 
-import App from './app/app';
+import CheckoutApp from './app/CheckoutApp';
 import { apiLoadStripe } from './api/stripeApi';
 
 const root = ReactDOM.createRoot(
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <StrictMode>
     <Stripe stripe={apiLoadStripe()}>
-      <App />
+      <CheckoutApp />
     </Stripe>
   </StrictMode>
 );
