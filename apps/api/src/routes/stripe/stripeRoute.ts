@@ -21,24 +21,20 @@ const stripe = new Stripe(config.stripe.secret_key, {
 
 stripeEvents.init(stripe);
 
-const router = express.Router();
+export const stripeRoute = express.Router();
 
-router.get('/load-stripe', loadStripe);
+stripeRoute.get('/load-stripe', loadStripe);
 
-router.post('/webhook', webhook);
+stripeRoute.get('/load-prices', loadPrices);
 
-router.get('/load-prices', loadPrices);
+stripeRoute.post('/create-checkout-session', createCheckoutSession);
 
-router.post('/create-checkout-session', createCheckoutSession);
+stripeRoute.post('/checkout-subscription-success', checkoutSubscriptionSuccess);
 
-router.post('/checkout-subscription-success', checkoutSubscriptionSuccess);
+stripeRoute.post('/customer-portal', customerPortal);
 
-router.post('/customer-portal', customerPortal);
+stripeRoute.post('/create-no-trial-subscription', createNoTrialSubscription);
 
-router.post('/create-no-trial-subscription', createNoTrialSubscription);
+stripeRoute.post('/create-free-trial-subscription', createFreeTrialSubscription);
 
-router.post('/create-free-trial-subscription', createFreeTrialSubscription);
-
-router.post('/setup-intent', setupIntent);
-
-export const stripeRoute = router;
+stripeRoute.post('/setup-intent', setupIntent);

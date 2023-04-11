@@ -84,8 +84,8 @@ export const webhook = (
       }
       break;
     default:
-      // logger.info(event.data?.object);
-      logger.info(`Unhandled event type ${event.type}`);
+      // logger.debug(event.data?.object);
+      logger.debug(`Unhandled event type ${event.type}`);
   }
 
   // Return a 200 respond to acknowledge receipt of the event

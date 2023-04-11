@@ -30,14 +30,12 @@ const SubscriptionForm = ({
   submitHandler,
   userData,
 }: SubscriptionFormProps) => {
+  const closeForm = () => !isFormProcessing && setProduct(null);
+
   return (
-    <div className="overlay" onClick={() => setProduct(null)}>
+    <div className="overlay" onClick={closeForm}>
       <div className="sidebar" onClick={(evt) => evt.stopPropagation()}>
-        <button
-          className="close-btn"
-          type="button"
-          onClick={() => setProduct(null)}
-        >
+        <button disabled={isFormProcessing} className="close-btn" type="button" onClick={closeForm}>
           &times;
         </button>
         <form onSubmit={submitHandler}>
