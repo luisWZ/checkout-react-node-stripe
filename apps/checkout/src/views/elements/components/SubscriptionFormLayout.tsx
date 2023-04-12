@@ -1,11 +1,12 @@
+import { useMemo } from 'react';
 import { Navigate } from 'react-router-dom';
-import SubscriptionForm from './SubscriptionForm';
+
+import { useLoadPrices } from '../../../hooks/useLoadPrices';
 import { useStripeForm } from '../../../hooks/useStripeForm';
+import { SubscriptionType } from '../../../models/interface';
 import Loading from '../../../ui/Loading/Loading';
 import PlanSelection from './PlanSelection';
-import { useLoadPrices } from '../../../hooks/useLoadPrices';
-import { SubscriptionType } from '../../../models/interface';
-import { useMemo } from 'react';
+import SubscriptionForm from './SubscriptionForm';
 
 type SubscriptionFormLayoutProps = {
   subscriptionType: SubscriptionType;

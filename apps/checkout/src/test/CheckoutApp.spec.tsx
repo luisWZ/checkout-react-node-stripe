@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import CheckoutApp from './CheckoutApp';
+import CheckoutApp from '../CheckoutApp';
 
 describe('CheckoutApp', () => {
   it('should render successfully', () => {

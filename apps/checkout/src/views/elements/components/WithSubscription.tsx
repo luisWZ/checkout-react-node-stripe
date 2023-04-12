@@ -1,9 +1,10 @@
-import { useLoadPrices } from '../../../hooks/useLoadPrices';
-import { useState } from 'react';
 import { Product } from '@checkout-stripe/interface';
+import { useState } from 'react';
+
+import { useLoadPrices } from '../../../hooks/useLoadPrices';
+import type { StateProduct } from '../../../models/interface';
 import Loading from '../../../ui/Loading/Loading';
 import PlanSelection from './PlanSelection';
-import type { StateProduct } from '../../../models/interface';
 
 export function WithSubscription(
   WrappedComponent: React.ComponentType<StateProduct>

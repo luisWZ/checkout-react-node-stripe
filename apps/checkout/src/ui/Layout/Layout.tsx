@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react';
+
 import GlobalStyles from './components/GlobalStyles';
-import Header from './component/Header';
+import Header from './components/Header';
 
 const Layout = ({ children }: PropsWithChildren) => {
   return (

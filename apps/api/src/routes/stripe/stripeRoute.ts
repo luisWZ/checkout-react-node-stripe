@@ -1,17 +1,16 @@
 import express from 'express';
 import Stripe from 'stripe';
 
-import { stripeEvents } from './StripeEvents';
 import { config } from '../../config';
+import { stripeEvents } from './StripeEvents';
 import {
-  loadStripe,
-  webhook,
-  loadPrices,
-  createCheckoutSession,
   checkoutSubscriptionSuccess,
-  customerPortal,
-  createNoTrialSubscription,
+  createCheckoutSession,
   createFreeTrialSubscription,
+  createNoTrialSubscription,
+  customerPortal,
+  loadPrices,
+  loadStripe,
   setupIntent,
 } from './stripeServices';
 

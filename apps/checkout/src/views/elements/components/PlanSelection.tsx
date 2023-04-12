@@ -1,4 +1,5 @@
 import { Price, Product } from '@checkout-stripe/interface';
+
 import { StateProduct } from '../../../models/interface';
 
 type PlanSelectionProps = {

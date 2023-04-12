@@ -1,4 +1,5 @@
 import { NextFunction, Response } from 'express';
+
 import { logger } from '../logger/logger';
 
 const errorStatus = { status: 'error' };

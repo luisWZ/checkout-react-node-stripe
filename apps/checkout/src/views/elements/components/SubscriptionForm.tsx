@@ -1,13 +1,14 @@
 import { CardElement } from '@stripe/react-stripe-js';
 import { Link } from 'react-router-dom';
-import ButtonSubmit from './ButtonSubmit';
-import TestCards from './TestCards';
+
 import type {
   OnInputChange,
   OnSubmit,
   StateProduct,
   UserData,
 } from '../../../models/interface';
+import ButtonSubmit from './ButtonSubmit';
+import TestCards from './TestCards';
 
 type SubscriptionFormProps = {
   errorMessage: string | null;

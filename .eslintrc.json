@@ -1,7 +1,7 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx"],
+  "plugins": ["@nrwl/nx", "simple-import-sort"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -17,6 +17,17 @@
                 "onlyDependOnLibsWithTags": ["*"]
               }
             ]
+          }
+        ],
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+          1,
+          {
+            "args": "all",
+            "varsIgnorePattern": "^_",
+            "argsIgnorePattern": "^_"
           }
         ]
       }

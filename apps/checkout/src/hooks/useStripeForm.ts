@@ -1,19 +1,20 @@
+import { Product } from '@checkout-stripe/interface';
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { useState } from 'react';
+
+import {
+  apiCreateFreeTrialSubscription,
+  apiCreateNoTrialSubscription,
+  apiSetupIntent,
+} from '../api/stripeApi';
+import { generateFakeUserData } from '../helpers';
+import type { UserData } from '../models/interface';
 import {
   OnInputChange,
   OnSubmit,
   SubscriptionState,
   SubscriptionType,
 } from '../models/interface';
-import type { UserData } from '../models/interface';
-import { Product } from '@checkout-stripe/interface';
-import { generateFakeUserData } from '../helpers';
-import {
-  apiCreateFreeTrialSubscription,
-  apiCreateNoTrialSubscription,
-  apiSetupIntent,
-} from '../api/stripeApi';
 
 type UseStripeFormProps = {
   subscriptionType: SubscriptionType;

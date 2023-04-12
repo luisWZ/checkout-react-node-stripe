@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { Global } from '@emotion/react';
+
 import CssModernReset from './CssModernReset';
 import CssScaffolding from './CssScaffolding';
 

@@ -1,10 +1,9 @@
 import type { NextFunction, Request, Response } from 'express';
 import Stripe from 'stripe';
 
-import { stripeEvents } from './StripeEvents';
-
 import { config } from '../../config';
 import { logger } from '../../lib';
+import { stripeEvents } from './StripeEvents';
 
 const stripe = new Stripe(config.stripe.secret_key, {
   apiVersion: '2022-11-15',

@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
 import type { Price } from '@checkout-stripe/interface';
+import { useEffect, useState } from 'react';
+
 import { apiLoadPrices } from '../api/stripeApi';
 
 export const useLoadPrices = () => {

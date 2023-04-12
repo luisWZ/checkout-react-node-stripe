@@ -1,4 +1,5 @@
 import { faker } from '@faker-js/faker/locale/es_MX';
+
 import { useLoadPrices } from '../../hooks/useLoadPrices';
 import Loading from '../../ui/Loading/Loading';
 

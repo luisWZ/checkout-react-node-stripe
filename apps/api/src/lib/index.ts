@@ -1,2 +1,2 @@
-export * from './logger/logger';
 export * from './error/errorHandler';
+export * from './logger/logger';

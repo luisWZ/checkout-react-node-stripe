@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import Stripe from 'stripe';
 import { Navigate, useSearchParams } from 'react-router-dom';
+import Stripe from 'stripe';
+
 import { apiCreateCheckoutSession } from '../../api/stripeApi';
 
 const SubscriptionSuccess = () => {
